@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
-from models.pedidos import Product
+from models.Pedidos import Product
 
 orders = Blueprint('orders', __name__)
 
