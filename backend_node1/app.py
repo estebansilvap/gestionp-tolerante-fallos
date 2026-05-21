@@ -1,7 +1,7 @@
 from flask import Flask
 from models.database import mysql
-from pattern.singleton import Config
-from controllers.pedidos import orders
+from Pattern.singleton import Config
+from controllers.Pedidos import orders
 
 app = Flask(__name__)
 app.config.from_object(Config)
