@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
-from models.pedidos import Product
+from models.Pedidos import Product
 
 orders = Blueprint('orders', __name__)
 
@@ -44,7 +44,7 @@ def update_product(id):
     su = 'se actualizo correctamente'
     return render_template('index.html', su = su)
 
-@orders.route('/api/productos/<int:id>', methods = ['DELETE'])
+@orders.route('/api/productos/<init:id>', methods = ['DELETE'])
 def delete_product(id):
     Product.delete(id)
     return jsonify({'msg': 'producto eliminado'})
